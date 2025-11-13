@@ -50,4 +50,4 @@ This fan detects its own blade-generated noise using a microphone, identifies th
 
 ---
 
-## [DevLog](Main/DevLog.md)
+## [DevLog](DevLog.md)
