@@ -48,4 +48,6 @@ This fan detects its own blade-generated noise using a microphone, identifies th
 | [Fan_Shroud](CAD/Project_CAD/Shroud.SLDPRT)                       |   Horizontal cylinder that houses fan, microphone, and speaker. Connects to support tube at bottom.      
 | [Final_Assembly](CAD/Project_CAD/Final_Assembly.SLDPRT)           |   Final assembly of shroud, tubewith holes, lid, and base.
 
+---
+
 ## [DevLog](docs/DevLog.md)
