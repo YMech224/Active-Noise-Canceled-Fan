@@ -38,7 +38,6 @@ This fan detects its own blade-generated noise using a microphone, identifies th
 
 ---
 
-
 ## CAD Model Links
 | [Part](link)                                                      |   Description  
 | [Box](CAD/Project_CAD/box.SLDPRT)                                 |   Box that forms the base. Houses electronics.   
@@ -48,3 +47,5 @@ This fan detects its own blade-generated noise using a microphone, identifies th
 | [Fan_Housing_Back_Plate](CAD/Project_CAD/Fan_Back_Plate.SLDPRT)   |   Circular plate that sits in behind fan to create circular profile to fit into shroud.   
 | [Fan_Shroud](CAD/Project_CAD/Shroud.SLDPRT)                       |   Horizontal cylinder that houses fan, microphone, and speaker. Connects to support tube at bottom.      
 | [Final_Assembly](CAD/Project_CAD/Final_Assembly.SLDPRT)           |   Final assembly of shroud, tubewith holes, lid, and base.
+
+## [DevLog](docs/DevLog.md)
