@@ -34,7 +34,7 @@ This fan detects its own blade-generated noise using a microphone, identifies th
     - Wired Teensy, speaker + amp, microphone, and fan together. Consolidated grounds and ensured that microphone can record audio that can be played out of the speaker. Also ensured that fan can be properly controlled via PWM. 
 ## Status/Next Steps
 - Bench testing is now complete. All components - speaker, mic, Teensy, and fan connect to each other and are functonal on the breadboard and mechanically fit into the shroud and base. 
-- Next steps will be rewiring everything into the 3D printed housing, taking decibel measurements, refining the algorithm (implement active FxLMS, possibly replace FFT with Goertzel), and creating a PCB to replace the breadboard.
+- Next steps will be rewiring everything into the 3D printed housing, taking decibel measurements, implementing the algorithm (possibly replace FFT with Goertzel), and creating a PCB to replace the breadboard.
 
 ---
 
