@@ -19,21 +19,20 @@ This fan detects its own blade-generated noise using a microphone, identifies th
 ---
 
 ## How it Works  
-1. The microcrophone and Teensy microcontroller communicate using I2S
-2. The noise data that is sent to the microcontroller from the mic is processed by an FFT (Fast Fourier Transform) in the PJRC Audio library.
-   - This identifies the specific frequency of noise with the highest amplitude
-4. Once the specific frequency is identified, the tone is phase shifted 180 deg and played out of the speaker using AudioConnection 
-5. A simple hill-climb/coordinate descent algorithm reads the FFT again and nudges the phase + amplitude of the anti-tone up and down until a minimum is achieved.  
-
+1. Error microphone near the fan records raw noise and sends to the microcontroller 
+2. The noise data that is sent to the microcontroller from the mic is processed by FFT in the PJRC Audio library.
+   - This identifies the major contributing frequency
+4. Once the specific frequency is identified, the signal is shifted by 180 deg, and the amplitude/phase are adjusted. The signal is played out of the speaker using AudioConnection 
+5. An error mic at the shroud mouth picks up residual sound at the original frequency. The algorithm continues to optimize amplitude and phase to minimize residual sound. 
 ---
 
 ## Testing 
 - Ran modal FEA to ensure that the housing doesn't resonate at the fan's blade pass frequency of 172 Hz.
     - Found main vibrational mode at 350 Hz. Well out of range for resonance.
 - Conducted bench testing
-    - Wired Teensy, speaker + amp, microphone, and fan together. Consolidated grounds and ensured that microphone can record audio that can be played out of the speaker. Also ensured that fan can be properly controlled via PWM. 
+    - Bench/smoketest is complete. Error mics and speaker mounted and connected to Teensy. 
 ## Status/Next Steps
-- Bench testing is now complete. All components - speaker, mic, Teensy, and fan connect to each other and are functonal on the breadboard and mechanically fit into the shroud and base. 
+- Bench testing is now complete. All components - speaker, mics, Teensy, and fan connect to each other and mechanically fit into the shroud and base. 
 - Next steps will be rewiring everything into the 3D printed housing, taking decibel measurements, implementing the algorithm (possibly replace FFT with Goertzel), and creating a PCB to replace the breadboard.
 
 ---
